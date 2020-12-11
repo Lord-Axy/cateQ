@@ -1,0 +1,391 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Cate Q</title>
+
+        <!-- CSS -->
+
+         <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" type="image/x-icon">
+
+    <!-- files -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet">
+    <link href="{% static 'css/owl.carousel.theme.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/ionicons.css' %}" rel="stylesheet">
+    <link href="{% static 'css/new_main.css' %}" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .map-container-6{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-6 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+        </style>
+    </head>
+    <body>
+
+    <div class="site-header-bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+               <a href="/"><img src="{% static 'images/logo.png' %}" class="logo_a" alt="logo"></a>
+            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 text-center">
+                <!--                        <span class="ion-android-cart"></span> 0 products-->
+                <!--                        <form>-->
+                <!--                            <div class="input-group">-->
+                <!--                                <input type="text" class="form-control" placeholder="">-->
+                <!--                                <span class="input-group-btn">-->
+                <!--                                    <button class="btn btn-default btn-robot" type="button">Search</button>-->
+                <!--                                </span>-->
+                <!--                            </div>&lt;!&ndash; /input-group &ndash;&gt;-->
+                <!--                        </form>-->
+                <nav class="navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav-bar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" style="align:right;" id="site-nav-bar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/categories/">PRODUCTS</a></li>
+                            <li><a href="/gallery/">Gallery</a></li>
+                            <li class="active"><a href="/faq/">FAQ</a></li>
+                            <li><a href="/about/">ABOUT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <section id="header" class="main-header products-header inner-header">
+            <div class="container">
+
+
+                <div class="intro row">
+                    <div class="overlay"></div>
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb">
+                            <li><a href="/">Home</a></li>
+                            <li class="active">FAQ</li>
+                        </ol>
+                    </div>
+                </div> <!-- /.intro.row -->
+            </div> <!-- /.container -->
+
+        </section> <!-- /#header -->
+
+
+    <!-- FAQ -->
+        <section class="faq">
+            <div class="container page-bgc">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box">
+                            <p></p>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box">
+                            <h2 class="title mt0" style="font-size: 40px;">Frequently asked Questions</h2>
+                        </div>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-2">
+                        <p class="inner-p" style="color:#666666">
+                           
+                        </p>
+                        <div id="accordion" role="tablist" aria-multiselectable="true" style="border-color:black;" class="panel-group">
+                            <div class="panel panel-default">
+                                <div id="headingOne" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="collapsed">What are the terms of payment?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseOne" role="tabpanel" aria-labelledby="headingOne" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;">
+                                    <div class="panel-body">
+                                        <p>We offer our clients payment on a prorated basis. Proportional amounts are discussed with each client. All prices quoted are in Canadian dollars plus applicable taxes. We accept Canadian and US dollars. Our clients can choose to pay either by cheques or credit cards (in the last case you will be billed by PayPal electronic invoice). We also accept cash, money orders and wire transfers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="headingTwo" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="">Do you offer any discounts?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseTwo" role="tabpanel" aria-labelledby="headingTwo" class="panel-collapse collapse in" aria-expanded="true">
+                                    <div class="panel-body">
+                                        <p>Yes, we offer a discount to our regular clients and participants of our public workshops on international marketing and trade.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="headingThree" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree" class="collapsed">What is the best country to go to?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseThree" role="tabpanel" aria-labelledby="headingThree" class="panel-collapse collapse" aria-expanded="false">
+                                    <div class="panel-body">
+                                        <p>Start with countries with a similar culture to yours and equal purchasing power parity of its consumers. However, do consider others. Benefits may not be clear, but they do exist. We recommend contacting professionals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="headingFour" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">What is your specialization?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse" aria-expanded="false">
+                                    <div class="panel-body">
+                                        <p>We specialize neither on country nor on industry because we care for you and your individual needs. By employing consultants with various country and industry backgrounds we are able to offer you a non-monopoly price based strictly on hours dedicated to your project. Find non-linear and out-of-the box solutions for your product/service. Specializing in certain countries or industries can result in monopolization. Moreover it can narrow strategic thinking and have clients pay more. International business consultants apply a similar approach regardless of which country you choose or your industry.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="headingFour" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">Have the procedures relating to exports by manufacturer exporters been simplified in GST regime?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse" aria-expanded="false">
+                                    <div class="panel-body">
+                                        <p>Yes. The procedures relating to export have been simplified so as to do away with the paper work and intervention of the department at various stages of export. The salient features of the scheme of export under GST regime are as follows:
+The goods and services can be exported either on payment of IGST which can be claimed as refund after the goods have been exported, or under bond or Letter of Undertaking (LUT) Without payment of IGST.
+In case of goods and services exported under bond or LUT, the exporter can claim refund of accumulated ITC on account of export.
+In case of goods the shipping bill is the only document required to be filed with the Customs for making exports. Requirement of filing the ARE 1/ARE 2 has been done away with.
+The supplies made for export are to be made under self-sealing and self-certification without any intervention of the departmental officer.
+The shipping bill filed with the Customs is treated as an application for refund of IGST and shall be deemed to have been filed after submission of export general manifest and furnishing of a valid return in Form GSTR-3 by the applicant.
+</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel panel-default">
+                                <div id="headingFour" role="tab" class="panel-heading">
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour" class="collapsed">What kind of guarantee do you provide?</a>
+                                    </h4>
+                                </div>
+                                <div id="collapseFour" role="tabpanel" aria-labelledby="headingFour" class="panel-collapse collapse" aria-expanded="false">
+                                    <div class="panel-body">
+                                        <p>CATE Q EXPORTS work hard to provide only quality products and to meet the growing needs of our clients. As a result, we want you to be happy with all our products. Therefore, we offer a 30-Day Money Back Guarantee for each of our products. If, for any reason, you are not completely satisfied with the product you purchased from us, you should notify us within 45 days from the date of the purchase and we will process your the refund. When requesting to return your money please let us know the reason you wish to stop using our product, and if there is anything we can do to keep your business.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="section pb-5">
+<div class="container" style="background: white;">
+  <!--Section heading-->
+  <div class="col-sm-12">
+                        <div class="title-box">
+                            <h2 class="title mt0" style="font-size: 26px;">Contact Us</h2>
+                        </div>
+                    </div>
+  <!--Section description-->
+  
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-5 mb-4">
+
+      <!--Form with header-->
+      <div class="">
+
+        <div class="card-body">
+          <!--Header-->
+          <!--Body-->
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label for="form-name">Your name</label>
+            <input type="text" name="name" id="form-name" class="form-control" required="required">
+            
+          </div>
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label for="form-name">Your contact number</label>
+            <input type="number" name="number" id="form-num" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <label for="form-email">Your email</label>
+            <input type="email" name="email" id="form-email" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-tag prefix grey-text"></i>
+            <label for="form-Subject">Subject</label>
+            <input type="text" name="subject" id="form-Subject" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil-alt prefix grey-text"></i>
+            <label for="form-text">Content</label>
+            <textarea id="form-text" name="content" class="form-control md-textarea" rows="3" required="required"></textarea>
+            
+          </div>
+
+          <div class="text-center mt-4">
+            <button onclick="send_mail();" class="btn btn-default btn-robot">Submit</button>
+          </div>
+          <br>
+          <div class="md-form" id="success" style="display: NONE; color: green;">Response Submitted Successfully! we will respond to you ASAP</div>
+          <div class="md-form" id="failure" style="color:red; display:none;">Response not Submitted, please check if all details are provided correctly or directly send email to <b>"cateqexports@gmail.com"</b></div>
+
+        </div>
+
+      </div>
+      <!--Form with header-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-7">
+
+      <!--Google map-->
+      <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.5394666807465!2d77.07265031482473!3d11.147636255280133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDA4JzUxLjUiTiA3N8KwMDQnMjkuNCJF!5e0!3m2!1sen!2sin!4v1582444271942!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    <!--Grid column-->
+
+  </div>
+</div>
+</section>
+<!--Section: Contact v.1-->
+
+ <!-- Footer -->
+        <section id="footer-widget" class="footer-widget">
+            <div class="container header-bg">
+                <div class="row">
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3>&nbsp</h3>
+                        
+                <a href="/"><img style="padding-left:25px;" src="{% static 'images/footer_logo.png' %}" alt="logo"></a>
+<p style="text-align: left;
+font: normal normal normal 14px/21px Poppins;
+letter-spacing: 0px;
+color: #999;
+opacity: 1;padding-top: 15px;
+    padding-left: 15px;">We are top Import and Export Company in Coimbatore, India.</p>
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font-family:Oswald; padding-left:25px;">QUICK LINKS</h3>
+                        <ul>
+                            <li style="padding-left:25px;"><a href="/">Home</a></li>
+                            <li style="padding-left:25px;"><a href="/categories/">Products</a></li>
+                            <li style="padding-left:25px;"><a href="/gallery/">Gallery</a></li>
+                            <li style="padding-left:25px;"><a href="/faq/">FAQ</a></li>
+                            <li style="padding-left:25px;"><a href="/about/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font:Oswald;padding-left:25px;">FOLLOW US ON</h3>
+                        
+                            <a style="padding-left:25px; href="#">
+<a href="https://www.facebook.com/pg/CATE-Q-Exports-108918893929407/about/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><path class="b" d="M20.768,0H3.236A3.234,3.234,0,0,0,0,3.234V20.766A3.234,3.234,0,0,0,3.236,24h8.647l.015-8.576H9.669a.526.526,0,0,1-.526-.524l-.011-2.765a.526.526,0,0,1,.526-.528h2.224V8.937c0-3.1,1.893-4.788,4.659-4.788H18.81a.526.526,0,0,1,.526.526V7.006a.526.526,0,0,1-.525.526H17.418c-1.5,0-1.8.715-1.8,1.763v2.313h3.3a.526.526,0,0,1,.522.588l-.328,2.765a.526.526,0,0,1-.522.464H15.638L15.623,24h5.145A3.234,3.234,0,0,0,24,20.766V3.234A3.234,3.234,0,0,0,20.768,0Z" transform="translate(601.998 3354)"/></g></svg></a></a>
+
+&nbsp<a href="https://www.instagram.com/cateqexports_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><g transform="translate(602 3354)"><path class="b" d="M16.85,0H7.15A7.158,7.158,0,0,0,0,7.15v9.7A7.158,7.158,0,0,0,7.15,24h9.7A7.158,7.158,0,0,0,24,16.85V7.15A7.158,7.158,0,0,0,16.85,0Zm4.735,16.85a4.735,4.735,0,0,1-4.735,4.735H7.15A4.735,4.735,0,0,1,2.414,16.85V7.15A4.735,4.735,0,0,1,7.15,2.414h9.7A4.735,4.735,0,0,1,21.586,7.15v9.7Z"/><path class="b" d="M139.207,133a6.207,6.207,0,1,0,6.207,6.207A6.214,6.214,0,0,0,139.207,133Zm0,10A3.793,3.793,0,1,1,143,139.207,3.793,3.793,0,0,1,139.207,143Z" transform="translate(-127.207 -127.207)"/><circle class="b" cx="1.487" cy="1.487" r="1.487" transform="translate(16.732 4.352)"/></g></g></svg></a>
+&nbsp<a href=" https://twitter.com/ExportsQ?s=08" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><path class="b" d="M23.619,36.813a9.5,9.5,0,0,1-1.655.558A5.16,5.16,0,0,0,23.326,35.2h0a.271.271,0,0,0-.4-.315h0a9.549,9.549,0,0,1-2.53,1.045.645.645,0,0,1-.158.02.671.671,0,0,1-.443-.169,5.174,5.174,0,0,0-3.424-1.292,5.532,5.532,0,0,0-1.639.253,5.013,5.013,0,0,0-3.378,3.612,5.52,5.52,0,0,0-.123,1.905.185.185,0,0,1-.047.145.192.192,0,0,1-.143.065h-.018A13.567,13.567,0,0,1,1.7,35.488h0a.271.271,0,0,0-.443.035h0A5.18,5.18,0,0,0,2.1,41.812a4.637,4.637,0,0,1-1.18-.457h0a.271.271,0,0,0-.4.233h0a5.181,5.181,0,0,0,3.022,4.773H3.43a4.656,4.656,0,0,1-.872-.083h0a.271.271,0,0,0-.308.348h0a5.186,5.186,0,0,0,4.1,3.527A9.548,9.548,0,0,1,1,51.779H.4a.4.4,0,0,0-.387.3.41.41,0,0,0,.2.453,14.2,14.2,0,0,0,7.136,1.924,14.4,14.4,0,0,0,6.1-1.294,13.467,13.467,0,0,0,4.462-3.344,14.659,14.659,0,0,0,2.732-4.576,14.455,14.455,0,0,0,.929-5.008v-.079a.88.88,0,0,1,.329-.685,10.227,10.227,0,0,0,2.057-2.258h0a.271.271,0,0,0-.335-.4Z" transform="translate(602 3321.509)"/></g></svg></a>
+
+                      
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font:Oswald;padding-left:25px;">CONTACT US</h3>
+                        <ul>
+                            <li style="color: #999; padding-left:25px;">cateqexports@gmail.com</li>
+                            <li style="color: #999; padding-left:25px;">+91 90879 11764, +91 88835 10368</li>
+                            <li style="color: #999; padding-left:25px;">9/43, Arugampalayam Kunnathur puthur (po),<br>  S.S kulam(via) <br>Coimbatore - 641 107 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-center">
+            <h3>All rights and copyrights recerved @ Cate Q export | 2019</h3>
+        </footer>
+
+    <!-- Scripts -->
+        <script src="{% static 'js/jquery-1.12.3.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script>
+        
+        function send_mail(){
+            if( $("#form-name").val()=='' || $("#form-num").val()=='' ||  $("#form-email").val()=='' ||  $("#form-Subject").val()=='' || $("#form-text").val() == ''  ){
+                $("#failure").show();
+                $("#sucess").hide();
+                return;
+            }
+            $.ajax({
+        url: '/send_mail/',
+        data: {
+          'name': $("#form-name").val(),
+          'number': $("#form-num").val(),
+          'email': $("#form-email").val(),
+          'subject': $("#form-Subject").val(),
+          'content': $("#form-text").val(),
+        },
+        success: function (data) {
+          $("#failure").hide();
+          $("#success").show();
+          $("#form-name").val('')
+          $("#form-number").val('')
+           $("#form-email").val('')
+          $("#form-Subject").val('')
+          $("#form-text").val('')
+          
+        },
+        error: function(data) {
+            console.log(data);
+            $("#failure").show();
+          $("#sucess").hide();
+        }
+      });
+        }
+    </script>
+    </body>
+</html>

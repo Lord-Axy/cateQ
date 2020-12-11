@@ -1,0 +1,408 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Cateq</title>
+
+        <!-- CSS -->
+
+        <!-- google fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+        <!-- files -->
+        <link href="{% static '/css/bootstrap.min.css'%}" rel="stylesheet">
+        <link href="{% static '/css/magnific-popup.css'%}" rel="stylesheet">
+        <link href="{% static '/css/owl.carousel.css'%}" rel="stylesheet">
+        <link href="{% static '/css/owl.carousel.theme.min.css'%}" rel="stylesheet">
+        <link href="{% static '/css/ionicons.css'%}" rel="stylesheet">
+        <link href="{% static '/css/new_main.css' %}" rel="stylesheet">
+        <link rel="shortcut icon" href="{% static '/images/favicon.ico' %}" type="image/x-icon">
+
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <style>
+        .map-container-6{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-6 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+    </style>
+    <body>
+
+    <!-- Site Header -->
+        <div class="site-header-bg">
+            <div class="container">
+                <div class="row">
+            <div class="col-sm-4">
+                <a href="index.html"><img src="{% static 'images/logo.png' %}" class="logo_a" alt="logo"></a>
+            </div>
+            <div class="col-sm-3"></div>
+            <div class="col-sm-5 text-center">
+                <!--                        <span class="ion-android-cart"></span> 0 products-->
+                <!--                        <form>-->
+                <!--                            <div class="input-group">-->
+                <!--                                <input type="text" class="form-control" placeholder="">-->
+                <!--                                <span class="input-group-btn">-->
+                <!--                                    <button class="btn btn-default btn-robot" type="button">Search</button>-->
+                <!--                                </span>-->
+                <!--                            </div>&lt;!&ndash; /input-group &ndash;&gt;-->
+                <!--                        </form>-->
+                <nav class="navbar-default">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#site-nav-bar" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+
+                    <div class="collapse navbar-collapse" style="align:right;" id="site-nav-bar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="/">Home</a></li>
+                            <li><a href="/categories/">PRODUCTS</a></li>
+                            <li><a href="/gallery/">Gallery</a></li>
+                            <li><a href="/faq/">FAQ</a></li>
+                            <li><a href="/about/">ABOUT</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </nav>
+            </div>
+        </div>
+            </div>
+        </div>
+        
+    <!-- Header -->
+
+        <section id="header" class="main-header">
+            <div class="container">
+
+
+
+                <div class="intro row">
+                    <div class="overlay"></div>
+                    <div class="col-sm-12">
+                        <h2 class="header-quote">WE PROVIDE THE BEST PRODUCTS FOR YOU</h2>
+                        <p style="text-transform: initial !important; color:#fff;text-align: -webkit-match-parent;">
+                            We are India's leading Agro and by products business platform with a dedicated team.
+                        </p>
+                        <h1 class="header-title">Cate Q Exports</h1>
+                    </div>
+                </div> <!-- /.intro.row -->
+            </div> <!-- /.container -->
+            <div class="nutral"></div>
+        </section> <!-- /#header -->
+
+    <!-- Product -->
+
+        <section id="product" class="product">
+            <div class="container section-bg">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box">
+                            <h2 class="title title_a">Welcome to our <span>Cate Q Exports</span></h2>
+                            <p style="text-transform: initial; text-align: center;font: normal normal normal 16px/25px Poppins;letter-spacing: 0px;color: #999999;opacity: 1;">We have more than 1000+ products</p>
+                            <a href="/categories/" class="btn btn-default btn-robot">View all categories</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxed">
+                       <div class="col-sm-12">
+                           <div id="partner-slider" class="owl-carousel">
+                               {% for product in categories %}
+                                <div class="item">
+                                    <a href="/products/?category={{product.id}}"><img style="width: 258px;height: 187px;" src="{{product.image.url}}" alt="partner"></a>
+                                    <a href="/products/?category={{product.id}}"><center><button type="button" style="font-family:poppins;font-size: 16px;" class="btn btn-default btn-robot home-btn">{{product.name}}</button></center></a>
+                                </div>
+                                    
+                                {% endfor %}
+                            </div>
+                       </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="classic-title">
+                            <div class="stiker">
+                                <h3 class="inner-stiker">Why we are best</h3>
+                            </div>
+                            <h3 class="outer-stiker"></h3>
+                            <div class="incline-div"></div>
+                        </div>
+                    </div>
+                    <div class="boxed">
+                        <div class="col-sm-4">
+                            <h3 class="inner-stiker" style="color:#333333;text-transform: uppercase; font-size=18px;"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a,.b{fill:#5ac7ff;}.a{opacity:0.5;}</style></defs><g transform="translate(-415 -1707)"><rect class="a" style="fill: #5ac7ff;" width="40" height="40" rx="2" transform="translate(419 1711)"/><rect style="fill: #5ac7ff;" class="b" width="38" height="38" rx="2" transform="translate(415 1707)"/></g></svg>About</h3>
+                            <p class="p-large" style="font-family: poppins; font-size:14px;">
+                               We are highly respected, registered private limited company. We deal primarily with agricultural related products. Our friendly staff connects local and global buyers and sellers. We are a licensed and legal entity that trades with great pride.
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+
+                            <h3 class="inner-stiker" style="color:#333333;text-transform: uppercase; font-size=18px;"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a,.b{fill:#5ac7ff;}.a{opacity:0.5;}</style></defs><g transform="translate(-415 -1707)"><rect class="a" style="fill: #5ac7ff;" width="40" height="40" rx="2" transform="translate(419 1711)"/><rect class="b" style="fill: #5ac7ff;" width="38" height="38" rx="2" transform="translate(415 1707)"/></g></svg>Services</h3>
+                            <p style="font-family: poppins;">
+                                We are importer and exporter of superior goods. Our staff strives to satisfy the suppliers, dealers, and end users. We never compromise on the quality of our top class products. Our price quotations and contractual terms are fair and reasonable.
+                            </p>
+                        </div>
+                        <div class="col-sm-4">
+                            <h3 class="inner-stiker" style="color:#333333;text-transform: uppercase;  font-size=18px;"><svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><defs><style>.a,.b{fill:#5ac7ff;}.a{opacity:0.5;}</style></defs><g transform="translate(-415 -1707)"><rect class="a" style="fill: #5ac7ff;" width="40" height="40" rx="2" transform="translate(419 1711)"/><rect class="b" style="fill: #5ac7ff;" width="38" height="38" rx="2" transform="translate(415 1707)"/></g></svg>Blossom</h3>
+                            <p style="font-family: poppins;">
+                                CATE Q EXPORTS is reckoned as the Agro, Coconut and bi products established in 2019. Under the proficient guidance of our mentor, Mr.S.RAGHU, Mr. V.UDHAYAKUMAR We have been able to achieve an acme of success in the industry.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    <!-- History -->
+        <section id="history" class="history">
+            <div class="container section-bg">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box">
+                            <h2 class="title mt0" style="font-size: 26px;">Why Us?</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxed">
+                        <div class="col-sm-10 col-sm-offset-1">
+                            <p style="font-family:poppins; font-size: 16px;">
+                               We are top Import and Export Company in Coimbatore, India. We proud to be a professional trading company in global markets. Our team believes in nurturing relationships and creating value for all customers.
+                            </p>
+                        </div>
+                        <div class="col-sm-12">
+                            <img class="img-responsive" src="{% static '/images/history.png' %}" alt="history">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Partner -->
+        <section id="partner" class="partner">
+            <div class="container page-bgc">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="title-box">
+                            <p style="font-size: 26px;">Our famous Products</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="boxed">
+                       <div class="col-sm-12">
+                           <div id="partner-slider2" class="owl-carousel">
+                               {% for product in famous_products %}
+                                <div class="item">
+                                    <a href="/product_detail/?prod_id={{product.id}}"><img src="{{product.image1.url}}" alt="partner"></a>
+                                    <center><div style="font-family:poppins; font-size:16px;color:#666666">{{product.name}}</div></center>
+                                </div>
+                                {% endfor %}
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="section pb-5">
+<div class="container" style="background: white;">
+  <!--Section heading-->
+  <div class="col-sm-12">
+                        <div class="title-box">
+                            <h2 class="title mt0" style="font-size: 26px;">Contact Us</h2>
+                        </div>
+                    </div>
+  <!--Section description-->
+  
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-5 mb-4">
+
+      <!--Form with header-->
+      <div class="">
+
+        <div class="card-body">
+          <!--Header-->
+          <!--Body-->
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label for="form-name">Your name</label>
+            <input type="text" name="name" id="form-name" class="form-control" required="required">
+            
+          </div>
+          <div class="md-form">
+            <i class="fas fa-user prefix grey-text"></i>
+            <label for="form-name">Your contact number</label>
+            <input type="number" name="number" id="form-num" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-envelope prefix grey-text"></i>
+            <label for="form-email">Your email</label>
+            <input type="email" name="email" id="form-email" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-tag prefix grey-text"></i>
+            <label for="form-Subject">Subject</label>
+            <input type="text" name="subject" id="form-Subject" class="form-control" required="required">
+            
+          </div>
+
+          <div class="md-form">
+            <i class="fas fa-pencil-alt prefix grey-text"></i>
+            <label for="form-text">Content</label>
+            <textarea id="form-text" name="content" class="form-control md-textarea" rows="3" required="required"></textarea>
+            
+          </div>
+
+          <div class="text-center mt-4">
+            <button onclick="send_mail();" class="btn btn-default btn-robot">Submit</button>
+          </div>
+          <br>
+          <div class="md-form" id="success" style="display: NONE; color: green;">Response Submitted Successfully! we will respond to you ASAP</div>
+          <div class="md-form" id="failure" style="color:red; display:none;">Response not Submitted, please check if all details are provided correctly or directly send email to <b>"cateqexports@gmail.com"</b></div>
+
+        </div>
+
+      </div>
+      <!--Form with header-->
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-7">
+
+      <!--Google map-->
+      <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3914.5394666807465!2d77.07265031482473!3d11.147636255280133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTHCsDA4JzUxLjUiTiA3N8KwMDQnMjkuNCJF!5e0!3m2!1sen!2sin!4v1582444271942!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+      </div>
+    <!--Grid column-->
+
+  </div>
+</div>
+</section>
+<!--Section: Contact v.1-->
+
+    <!-- Footer -->
+        <section id="footer-widget" class="footer-widget">
+            <div class="container header-bg">
+                <div class="row">
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3>&nbsp</h3>
+                        
+                <a href="/"><img style="padding-left:25px;" src="{% static 'images/footer_logo.png' %}" alt="logo"></a>
+<p style="text-align: left;
+font: normal normal normal 14px/21px Poppins;
+letter-spacing: 0px;
+color: #999;
+opacity: 1;padding-top: 15px;
+    padding-left: 15px;">We are top Import and Export Company in Coimbatore, India.</p>
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font-family:Oswald; padding-left:25px;">QUICK LINKS</h3>
+                        <ul>
+                            <li style="padding-left:25px;"><a href="/">Home</a></li>
+                            <li style="padding-left:25px;"><a href="/categories/">Products</a></li>
+                            <li style="padding-left:25px;"><a href="/gallery/">Gallery</a></li>
+                            <li style="padding-left:25px;"><a href="/faq/">FAQ</a></li>
+                            <li style="padding-left:25px;"><a href="/about/">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font:Oswald;padding-left:25px;">FOLLOW US ON</h3>
+                        
+                            <a style="padding-left:25px; href="#">
+<a href="https://www.facebook.com/pg/CATE-Q-Exports-108918893929407/about/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><path class="b" d="M20.768,0H3.236A3.234,3.234,0,0,0,0,3.234V20.766A3.234,3.234,0,0,0,3.236,24h8.647l.015-8.576H9.669a.526.526,0,0,1-.526-.524l-.011-2.765a.526.526,0,0,1,.526-.528h2.224V8.937c0-3.1,1.893-4.788,4.659-4.788H18.81a.526.526,0,0,1,.526.526V7.006a.526.526,0,0,1-.525.526H17.418c-1.5,0-1.8.715-1.8,1.763v2.313h3.3a.526.526,0,0,1,.522.588l-.328,2.765a.526.526,0,0,1-.522.464H15.638L15.623,24h5.145A3.234,3.234,0,0,0,24,20.766V3.234A3.234,3.234,0,0,0,20.768,0Z" transform="translate(601.998 3354)"/></g></svg></a></a>
+
+&nbsp<a href="https://www.instagram.com/cateqexports_/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><g transform="translate(602 3354)"><path class="b" d="M16.85,0H7.15A7.158,7.158,0,0,0,0,7.15v9.7A7.158,7.158,0,0,0,7.15,24h9.7A7.158,7.158,0,0,0,24,16.85V7.15A7.158,7.158,0,0,0,16.85,0Zm4.735,16.85a4.735,4.735,0,0,1-4.735,4.735H7.15A4.735,4.735,0,0,1,2.414,16.85V7.15A4.735,4.735,0,0,1,7.15,2.414h9.7A4.735,4.735,0,0,1,21.586,7.15v9.7Z"/><path class="b" d="M139.207,133a6.207,6.207,0,1,0,6.207,6.207A6.214,6.214,0,0,0,139.207,133Zm0,10A3.793,3.793,0,1,1,143,139.207,3.793,3.793,0,0,1,139.207,143Z" transform="translate(-127.207 -127.207)"/><circle class="b" cx="1.487" cy="1.487" r="1.487" transform="translate(16.732 4.352)"/></g></g></svg></a>
+&nbsp<a href=" https://twitter.com/ExportsQ?s=08" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><defs><style>.a{fill:none;}.b{fill:#999;}</style></defs><g transform="translate(-602 -3354)"><rect class="a" width="24" height="24" transform="translate(602 3354)"/><path class="b" d="M23.619,36.813a9.5,9.5,0,0,1-1.655.558A5.16,5.16,0,0,0,23.326,35.2h0a.271.271,0,0,0-.4-.315h0a9.549,9.549,0,0,1-2.53,1.045.645.645,0,0,1-.158.02.671.671,0,0,1-.443-.169,5.174,5.174,0,0,0-3.424-1.292,5.532,5.532,0,0,0-1.639.253,5.013,5.013,0,0,0-3.378,3.612,5.52,5.52,0,0,0-.123,1.905.185.185,0,0,1-.047.145.192.192,0,0,1-.143.065h-.018A13.567,13.567,0,0,1,1.7,35.488h0a.271.271,0,0,0-.443.035h0A5.18,5.18,0,0,0,2.1,41.812a4.637,4.637,0,0,1-1.18-.457h0a.271.271,0,0,0-.4.233h0a5.181,5.181,0,0,0,3.022,4.773H3.43a4.656,4.656,0,0,1-.872-.083h0a.271.271,0,0,0-.308.348h0a5.186,5.186,0,0,0,4.1,3.527A9.548,9.548,0,0,1,1,51.779H.4a.4.4,0,0,0-.387.3.41.41,0,0,0,.2.453,14.2,14.2,0,0,0,7.136,1.924,14.4,14.4,0,0,0,6.1-1.294,13.467,13.467,0,0,0,4.462-3.344,14.659,14.659,0,0,0,2.732-4.576,14.455,14.455,0,0,0,.929-5.008v-.079a.88.88,0,0,1,.329-.685,10.227,10.227,0,0,0,2.057-2.258h0a.271.271,0,0,0-.335-.4Z" transform="translate(602 3321.509)"/></g></svg></a>
+
+                      
+                    </div>
+                    <div class="col-sm-3" style="padding:0px;">
+                        <h3 style="font:Oswald;padding-left:25px;">CONTACT US</h3>
+                        <ul>
+                            <li style="color: #999; padding-left:25px;">cateqexports@gmail.com</li>
+                            <li style="color: #999; padding-left:25px;">+91 90879 11764, +91 88835 10368</li>
+                            <li style="color: #999; padding-left:25px;">9/43, Arugampalayam Kunnathur puthur (po),<br>  S.S kulam(via) <br>Coimbatore - 641 107 </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer text-center">
+            <h3>All rights and copyrights recerved @ Cate Q export | 2019</h3>
+        </footer>
+
+    <!-- Scripts -->
+        <script src="{% static '/js/jquery-1.12.3.min.js' %}"></script>
+        <script src="{% static '/js/bootstrap.min.js' %}"></script>
+        <script src="{% static '/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static '/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static '/js/script.js' %}"></script>
+
+   
+    <script>
+        
+        function send_mail(){
+            if( $("#form-name").val()=='' || $("#form-num").val()=='' ||  $("#form-email").val()=='' ||  $("#form-Subject").val()=='' || $("#form-text").val() == ''  ){
+                $("#failure").show();
+                $("#sucess").hide();
+                return;
+            }
+            $.ajax({
+        url: '/send_mail/',
+        data: {
+          'name': $("#form-name").val(),
+          'number': $("#form-num").val(),
+          'email': $("#form-email").val(),
+          'subject': $("#form-Subject").val(),
+          'content': $("#form-text").val(),
+        },
+        success: function (data) {
+          $("#failure").hide();
+          $("#success").show();
+          $("#form-name").val('')
+          $("#form-number").val('')
+           $("#form-email").val('')
+          $("#form-Subject").val('')
+          $("#form-text").val('')
+          
+        },
+        error: function(data) {
+            console.log(data);
+            $("#failure").show();
+          $("#sucess").hide();
+        }
+      });
+        }
+    </script>
+    </body>
+    
+</html>
